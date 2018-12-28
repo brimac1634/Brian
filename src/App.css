@@ -60,12 +60,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	height: 100%;
 	width: 40px;
-	height: auto;
-	top: 50%;
-	transform: translate(0, -50%);
-	left: 25px;
+	top: 0;
+	left: 0;
 }
+
+
 
 .menu-button {
 	display: block;
@@ -73,7 +75,7 @@
 	border: none;
 	margin-top: -20px;
 	background: transparent;
-	font-size: 0.8em;
+	font-size: 0.6em;
 }
 
 .menu-button:hover {

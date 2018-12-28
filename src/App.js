@@ -6,8 +6,20 @@ import linkedin from './linkedin.svg';
 import facebook from './facebook.svg';
 import MainView from './MainView/MainView';
 import AnimatedMenuIcon from './Components/AnimatedMenuIcon';
+import SlideMenu from './Components/SlideMenu';
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      menuIsOn: false,
+    }
+  }
+
+  componentDidMount() {
+
+  }
+
   render() {
     return (
       <div className='border'>
@@ -23,8 +35,10 @@ class App extends Component {
           <MainView />
         </div>
         <div className='menu-button-container'>
-          <AnimatedMenuIcon />
-          <button type='button' className='menu-button'>Menu</button>
+          <button type='button' ref='menuButton' className='menu-button'>Menu</button>
+        </div>
+        <div className='slide-menu'>
+          <SlideMenu />
         </div>
       </div>
     );

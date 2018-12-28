@@ -28,11 +28,11 @@
 }
 
 .nav-icon:active:before {
-  transform: translateY(8px) rotate(135deg);
+  transform: translateY(9px) rotate(135deg);
 }
 
 .nav-icon:active:after {
-  transform: translateY(-8px) rotate(-135deg);
+  transform: translateY(-9px) rotate(-135deg);
 }
 
 .nav-icon:active div {

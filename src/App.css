@@ -65,13 +65,13 @@
 	top: 50%;
 	transform: translate(0, -50%);
 	left: 25px;
-	background: red;
 }
 
 .menu-button {
 	display: block;
 	text-transform: uppercase;
 	border: none;
+	margin-top: -20px;
 	background: transparent;
 	font-size: 0.8em;
 }

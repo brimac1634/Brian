@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Link} from 'react-router-dom';
+import github from './github.svg';
+import linkedin from './linkedin.svg';
+import facebook from './facebook.svg';
+import MainView from './MainView/MainView';
+import AnimatedMenuIcon from './Components/AnimatedMenuIcon';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='border'>
+        <div className='logo'>
+          <Link to={'/'} className='logo-link' title='Home'>Brian</Link>
+        </div>
+        <div className='social-media-container'>
+          <a href='#'><img src={github} alt='GitHub'/></a>
+          <a href='#'><img src={linkedin} alt='LinkedIn'/></a>
+          <a href='#'><img src={facebook} alt='Facebook'/></a>
+        </div>
+        <div className='main-view'>
+          <MainView />
+        </div>
+        <div className='menu-button-container'>
+          <AnimatedMenuIcon />
+          <button type='button' className='menu-button'>Menu</button>
+        </div>
       </div>
     );
   }

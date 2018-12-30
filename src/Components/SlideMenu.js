@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const SlideMenu = () => {
 	return (
@@ -11,3 +12,5 @@ const SlideMenu = () => {
 		</div>
 	);
 }
+
+export default SlideMenu;

@@ -31,9 +31,7 @@ class App extends Component {
           <a href='#'><img src={linkedin} alt='LinkedIn'/></a>
           <a href='#'><img src={facebook} alt='Facebook'/></a>
         </div>
-        <div className='main-view'>
-          <MainView />
-        </div>
+        <MainView className='main-view'/>
         <div className='menu-button-container'>
           <button type='button' ref='menuButton' className='menu-button'>Menu</button>
         </div>

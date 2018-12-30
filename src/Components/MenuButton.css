@@ -9,11 +9,29 @@
   background-color: #000;
   content: '';
   display: block;
-  border-radius: 1px;
-  height: 2px;
+  height: 1px;
   margin: 7px 0;
   transition: all .4s ease-in-out;
 }
+
+.menu-button-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40px;
+  top: 0;
+  left: 0;
+}
+
+.menu-button-container p {
+  text-transform: uppercase;
+  margin-top: -10px;
+  font-size: 0.6em;
+}
+
 
 .nav-icon:hover:before {
   transform: scaleX(0.7);

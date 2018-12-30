@@ -54,34 +54,8 @@
 	bottom: 40px;
 }
 
-.menu-button-container {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	width: 40px;
-	top: 0;
-	left: 0;
-}
-
-
-
-.menu-button {
-	display: block;
-	text-transform: uppercase;
-	border: none;
-	margin-top: -20px;
-	background: transparent;
-	font-size: 0.6em;
-}
-
-.menu-button:hover {
-
-}
-
 .slide-menu {
 	position: relative;
+	/*transform: translate(-400px, 0);*/
 }
 

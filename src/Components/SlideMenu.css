@@ -1,4 +1,7 @@
 .slide-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 400px;
 	height: 100vh;
 	overflow-x: hidden;
@@ -7,6 +10,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	transition: translate 0.5s ease-out;
 }
 
 .menu-logo {
@@ -48,4 +52,13 @@
 
 .contact-info p {
 	font-size: 0.6em;
+}
+
+.menu-button {
+	position: absolute;
+	width: 30px;
+	height: 60px;
+	right: 16px;
+	top: 50%;
+	transform: translate(0, -50%);
 }

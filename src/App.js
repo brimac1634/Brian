@@ -5,19 +5,28 @@ import github from './github.svg';
 import linkedin from './linkedin.svg';
 import facebook from './facebook.svg';
 import MainView from './MainView/MainView';
-import AnimatedMenuIcon from './Components/AnimatedMenuIcon';
 import SlideMenu from './Components/SlideMenu';
 
 class App extends Component {
-  constructor (props) {
-    super(props)
+  constructor (props, context) {
+    super(props, context);
     this.state = {
-      menuIsOn: false,
-    }
+      menuIsVisible: false,
+    };
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
+  toggleMenu() {
+    this.setState({
+      menuIsVisible: !this.state.menuIsVisible
+    });
+  }
 
+  handleClick(e) {
+    this.toggleMenu();
+    console.log('clicked');
+    e.stopPropagation();
   }
 
   render() {
@@ -32,9 +41,6 @@ class App extends Component {
           <a href='#'><img src={facebook} alt='Facebook'/></a>
         </div>
         <MainView className='main-view'/>
-        <div className='menu-button-container'>
-          <button type='button' ref='menuButton' className='menu-button'>Menu</button>
-        </div>
         <div className='slide-menu'>
           <SlideMenu />
         </div>

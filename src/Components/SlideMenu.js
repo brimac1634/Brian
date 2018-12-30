@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './SlideMenu.css';
+import MenuButton from './MenuButton';
 
 const SlideMenu = () => {
 	return (
@@ -17,6 +18,9 @@ const SlideMenu = () => {
 				<p><strong>Brian MacPherson</strong></p>
 				<p>brimac1634@gmail.com</p>
 				<p>+852-6897-2280</p>
+			</div>
+			<div className='menu-button'>
+				<MenuButton />
 			</div>
 		</div>
 	);

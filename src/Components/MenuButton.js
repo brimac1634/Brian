@@ -1,13 +1,22 @@
 import React from 'react';
 import './MenuButton.css';
 
-const MenuButton = () => {
+const MenuButton = ({handleMouseDown, visibility}) => {
+
+	var buttonState = 'open';
+
+	if (visibility) {
+		buttonState = 'close';
+	}
+
 	return (
-		<div className='menu-button-container'>
-			<div className="nav-icon">
-			  <div></div>
-			</div>
-			<p>Menu</p>
+		<div>
+			<button className='menu-button-container' onMouseDown={handleMouseDown}>
+				<div className={buttonState}>
+				  <div></div>
+				</div>
+				Menu
+			</button>
 		</div>
 	);
 }

@@ -1,20 +1,7 @@
-.nav-icon {
-  margin: 1em;
-  width: 30px;
-}
-
-.nav-icon:after, 
-.nav-icon:before, 
-.nav-icon div {
-  background-color: #000;
-  content: '';
-  display: block;
-  height: 1px;
-  margin: 7px 0;
-  transition: all .4s ease-in-out;
-}
 
 .menu-button-container {
+  border: none;
+  background: transparent;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -24,16 +11,36 @@
   width: 40px;
   top: 0;
   left: 0;
-}
-
-.menu-button-container p {
   text-transform: uppercase;
   margin-top: -10px;
   font-size: 0.6em;
 }
 
+.menu-button-container:hover {
+  cursor: pointer;
+}
 
-.nav-icon:hover:before {
+.open,
+.close {
+  margin: 1em;
+  width: 30px;
+}
+
+.open:after, 
+.open:before, 
+.open div,
+.close:after, 
+.close:before, 
+.close div {
+  background-color: #000;
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 7px 0;
+  transition: all .4s ease-in-out;
+}
+
+/*.nav-icon:hover:before {
   transform: scaleX(0.7);
 }
 
@@ -43,16 +50,16 @@
 
 .nav-icon:hover div {
   transform: scaleX(1.2);
+}*/
+
+.close:before {
+  transform: translateY(8px) rotate(135deg);
 }
 
-.nav-icon:active:before {
-  transform: translateY(9px) rotate(135deg);
+.close:after {
+  transform: translateY(-8px) rotate(-135deg);
 }
 
-.nav-icon:active:after {
-  transform: translateY(-9px) rotate(-135deg);
-}
-
-.nav-icon:active div {
+.close div {
   transform: scale(0);
 }

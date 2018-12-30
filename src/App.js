@@ -11,7 +11,7 @@ class App extends Component {
   constructor (props, context) {
     super(props, context);
     this.state = {
-      menuIsVisible: false,
+      menuIsVisible: false
     };
     this.toggleMenu = this.toggleMenu.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
@@ -25,9 +25,10 @@ class App extends Component {
 
   handleMouseDown = (event) => {
     this.toggleMenu();
-    console.log('clicked');
     event.stopPropagation();
   }
+
+
 
   render() {
     return (

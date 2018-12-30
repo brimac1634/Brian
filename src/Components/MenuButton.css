@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.menu-button-container:focus {
+  outline: 0;
+}
+
 .open,
 .close {
   margin: 1em;

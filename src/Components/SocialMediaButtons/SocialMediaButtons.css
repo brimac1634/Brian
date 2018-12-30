@@ -1,0 +1,22 @@
+.social-media-container {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	width: 40px;
+	top: 0;
+	right: 0;
+}
+
+.social-media-container a img {
+	height: 20px;
+	margin: 6px;
+	width: auto;
+	transition: all 0.3s;
+}
+
+.social-media-container a img:hover {
+	transform: scale(1.2);
+}

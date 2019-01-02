@@ -44,17 +44,17 @@
   transition: all .4s ease-in-out;
 }
 
-/*.nav-icon:hover:before {
+.open:hover:before {
   transform: scaleX(0.7);
 }
 
-.nav-icon:hover:after {
+.open:hover:after {
   transform: scaleX(0.7);
 }
 
-.nav-icon:hover div {
+.open:hover div {
   transform: scaleX(1.2);
-}*/
+}
 
 .close:before {
   transform: translateY(8px) rotate(135deg);

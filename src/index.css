@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Khula');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Khula", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,4 +13,42 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 5em;
+  text-align: start;
+}
+
+h2 {
+    text-transform: none;
+    line-height: 1.1;
+    margin-bottom: 50px;
+    text-align: start;
+}
+
+section {
+  height: auto;
+  margin: 20px 0 0 0;
+}
+
+.row {
+  width: 100%;
+  height: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #222; 
 }

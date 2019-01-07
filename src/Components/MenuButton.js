@@ -1,19 +1,21 @@
 import React from 'react';
 import './MenuButton.css';
 
-const MenuButton = ({handleMouseDown, handleMouseOver, menuVisibility}) => {
+const MenuButton = ({handleMouseDown, handleMouseOver, handleMouseOut, menuVisibility}) => {
 
 	var buttonState = 'open';
+	var menuState = 'menu-closed';
 
 	if (menuVisibility) {
 		buttonState = 'close';
+		menuState = 'menu-open';
 	}
 
 
 
 	return (
 		<div>
-			<button className='menu-button-container' onMouseDown={handleMouseDown} onMouseOver={handleMouseOver} onMouseOut={handleMouseOver}>
+			<button className={menuState} onMouseDown={handleMouseDown} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
 				<div className={buttonState}>
 				  <div></div>
 				</div>

@@ -4,7 +4,7 @@
 	position: fixed;
 	top: 40px;
 	left: 0;
-	width: 400px;
+	width: 600px;
 	height: 100vh;
 	overflow-x: hidden;
 	background: #f9f9f9;
@@ -21,11 +21,11 @@
 }
 
 .hide {
-	transform: translate(-400px, 0);
+	transform: translate(-600px, 0);
 }
 
 .peak {
-	transform: translate(-320px, 0);
+	transform: translate(-520px, 0);
 }
 
 .menu-logo {

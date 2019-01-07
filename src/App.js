@@ -14,9 +14,11 @@ class App extends Component {
       peakIsVisible: false
     };
     this.toggleMenu = this.toggleMenu.bind(this);
-    this.togglePeak = this.togglePeak.bind(this);
+    this.Peak = this.peak.bind(this);
+    this.removePeak = this.removePeak.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
   }
 
   toggleMenu() {
@@ -25,24 +27,36 @@ class App extends Component {
     });
   }
 
-  togglePeak() {
+  peak() {
     this.setState({
-      peakIsVisible: !this.state.peakIsVisible
+      peakIsVisible: true
+    })
+  }
+
+  removePeak() {
+    this.setState({
+      peakIsVisible: false
     })
   }
 
   handleMouseDown = (event) => {
-    this.toggleMenu();
     this.setState({
-      peakIsVisible: this.state.menuIsVisible ? true : false
+      peakIsVisible: false
     })
-    console.log(this.state.peakIsVisible);
+    this.toggleMenu();
+    
     event.stopPropagation();
   }
 
   handleMouseOver = (event) => {
     if (!this.state.menuIsVisible) {
-      this.togglePeak();
+      this.peak();
+    }
+  }
+
+  handleMouseOut = (event) => {
+    if (!this.state.menuIsVisible) {
+      this.removePeak();
     }
   }
 
@@ -55,8 +69,8 @@ class App extends Component {
         </div>
         <SocialMediaButtons />
         <MainView className='main-view'/>
-        <SlideMenu menuVisibility={this.state.menuIsVisible} peakVisibility={this.state.peakIsVisible}/>
-        <MenuButton className='menu-button' handleMouseDown={this.handleMouseDown} menuVisibility={this.state.menuIsVisible} handleMouseOver={this.handleMouseOver} />
+        <SlideMenu menuVisibility={this.state.menuIsVisible} peakVisibility={this.state.peakIsVisible} handleMouseDown={this.handleMouseDown}/>
+        <MenuButton className='menu-button' handleMouseDown={this.handleMouseDown} menuVisibility={this.state.menuIsVisible} handleMouseOver={this.handleMouseOver} handleMouseOut={this.handleMouseOut} />
       </div>
     );
   }

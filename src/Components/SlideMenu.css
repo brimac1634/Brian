@@ -1,7 +1,8 @@
 .show,
-.hide {
+.hide,
+.peak {
 	position: fixed;
-	top: 0;
+	top: 40px;
 	left: 0;
 	width: 400px;
 	height: 100vh;
@@ -20,7 +21,11 @@
 }
 
 .hide {
-	transform: translate(-360px, 0);
+	transform: translate(-400px, 0);
+}
+
+.peak {
+	transform: translate(-320px, 0);
 }
 
 .menu-logo {
@@ -69,11 +74,3 @@
 	color: #000;
 }
 
-.menu-button {
-	position: absolute;
-	width: 30px;
-	height: 60px;
-	right: 10px;
-	top: 50%;
-	transform: translate(0, -50%);
-}

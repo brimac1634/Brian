@@ -1,14 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './SlideMenu.css';
-import MenuButton from './MenuButton';
 
-const SlideMenu = ({handleMouseDown, menuVisibility}) => {
+const SlideMenu = ({handleMouseDown, menuVisibility, peakVisibility}) => {
 
 	var visibility = 'hide';
 
 	if (menuVisibility) {
 		visibility = 'show';
+	}
+
+	if (peakVisibility) {
+		visibility = 'peak';
 	}
 
 	return (
@@ -26,9 +29,6 @@ const SlideMenu = ({handleMouseDown, menuVisibility}) => {
 				<a href='mailto:brimac1634@gmail.com?Subject=Nice%20to%20meet%20you!' target='_top'>brimac1634@gmail.com</a>
 				<br/>
 				<a href='tel:+852-6897-2280'>+852-6897-2280</a>
-			</div>
-			<div className='menu-button'>
-				<MenuButton handleMouseDown={handleMouseDown} visibility={menuVisibility}/>
 			</div>
 		</div>
 	);

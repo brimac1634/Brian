@@ -12,8 +12,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.4s;
-	transition-timing-function: cubic-bezier(.84,-0.1,.71,1.05);
+	transition: transform 500ms cubic-bezier(0.7, 0, 0.3, 1) 0ms;
 }
 
 .show {
@@ -74,3 +73,14 @@
 	color: #000;
 }
 
+.first {
+	animation-delay: .5s;
+}
+
+.second {
+	animation-delay: .7s;
+}
+
+.third {
+	animation-delay: .9s;
+}

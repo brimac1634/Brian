@@ -1,28 +1,20 @@
 import React from 'react';
 import './About.css';
-import Scroll from '../../Components/Scroll';
 import Brian from './Brian.jpg';
 
 const About = () => {
 	return (
 		<div className='about'>
-			<Scroll>
-				<section className='container header'>
-					<div className='purple-div'/>
-					<div className='row'>
-						<div className='col'>
-							<h1><strong>Brian <br/>MacPherson</strong></h1>
-						</div>
-						<div className='col'>
-							<h2>Full Stack Developer
-							<br/>Hong Kong</h2>
-						</div>
+				<section className='header'>
+					<div className='white-div'/>
+					<div className='title'>
+						<h1 className='animate-pop-in'><strong>Brian <br/>MacPherson</strong></h1>
+						<h2 className='animate-pop-in'>Full Stack Developer
+						<br/>Hong Kong</h2>
 					</div>
 				</section>
 				<section className='section-about'>
-					<div className='row'>
-						<h2>Brian Who?</h2>
-					</div>
+					<h2 className='animate-pop-in'>Brian Who?</h2>
 					<div className='row'>
 						<div className='col'>
 							<img src={Brian} alt='Brian'/>
@@ -38,7 +30,6 @@ const About = () => {
 						<h2>How can I help?</h2>
 					</div>
 				</section>
-			</Scroll>
 		</div>
 	);
 }

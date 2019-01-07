@@ -5,23 +5,28 @@ import './SlideMenu.css';
 const SlideMenu = ({handleMouseDown, menuVisibility, peakVisibility}) => {
 
 	var visibility = 'hide';
+	var animate = 'none';
 
 	if (menuVisibility) {
 		visibility = 'show';
+		animate = 'animate-pop-in';
+	} else {
+		animate = 'animate-pop-out'
 	}
 
 	if (peakVisibility) {
 		visibility = 'peak';
 	}
 
+
 	return (
 		<div className={visibility}>
 			<div className='menu-logo'><h3>Brian</h3></div>
 			<div className='separator'></div>
 			<div className='nav-list'>
-			    <Link to={'/'} className='link' title='About' onMouseDown={handleMouseDown}>About.</Link>
-			    <Link to={'/Projects'} className='link' title='Projects' onMouseDown={handleMouseDown}>Projects.</Link>
-			    <Link to={'/Contact'} className='link' title='Contact' onMouseDown={handleMouseDown}>Contact.</Link>
+			    <Link to={'/'} className={`link ${animate} first`} title='About' onMouseDown={handleMouseDown}>About.</Link>
+			    <Link to={'/Projects'} className={`link ${animate} second`} title='Projects' onMouseDown={handleMouseDown}>Projects.</Link>
+			    <Link to={'/Contact'} className={`link ${animate} third`} title='Contact' onMouseDown={handleMouseDown}>Contact.</Link>
 			</div>
 			<div className='separator'></div>
 			<div className='contact-info'>
